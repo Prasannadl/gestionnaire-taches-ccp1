@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestionnaire de Tâches</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <header>
+            <h1>Mes Tâches</h1>
+        </header>
+
+        <section class="task-input-section">
+            <form id="taskForm" aria-label="Formulaire d'ajout de tâche">
+                <input 
+                    type="text" 
+                    id="taskInput" 
+                    placeholder="Ajouter une nouvelle tâche..." 
+                    required
+                    aria-label="Nouvelle tâche"
+                    maxlength="100"
+                >
+                <button type="submit" class="btn-add">
+                    Ajouter
+                </button>
+            </form>
+            <p id="errorMessage" class="error-message" role="alert"></p>
+        </section>
+
+        <section class="task-list-section">
+            <div class="task-stats">
+                <p id="taskCount">0 tâche(s)</p>
+            </div>
+            <ul id="taskList" class="task-list" aria-label="Liste des tâches">
+                <!-- Tasks will be inserted here by JavaScript -->
+            </ul>
+        </section>
+
+        <footer>
+            <p class="info-text">Les tâches sont sauvegardées localement</p>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
